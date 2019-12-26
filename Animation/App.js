@@ -7,6 +7,7 @@ import {AnimatedText} from './Components/AnimatedText';
 import {AnimatableView} from './Components/AnimatableView';
 // import {VeryLongList} from './Components/VeryLongList';
 import { VeryLongListTemplate } from './Components/VeryLongListTemplate';
+import { FullDraggableScreen } from './Components/Draggable';
 
 
 /*
@@ -34,7 +35,8 @@ const App = () => {
       <StatusBar barStyle="dark-content" />
       <SafeAreaView style={{alignSelf: 'center', flex: 1}}>
         {/*<VeryLongList />*/}
-        <VeryLongListTemplate />
+        {/*<VeryLongListTemplate />*/}
+        <FullDraggableScreen />
       </SafeAreaView>
     </>
   );

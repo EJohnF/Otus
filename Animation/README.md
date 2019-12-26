@@ -48,8 +48,20 @@ dependencies {
 1. [Вибрация](https://facebook.github.io/react-native/docs/vibration)
 2. [Звук](https://medium.com/@emmettharper/the-state-of-audio-libraries-in-react-native-7e542f57b3b4) 
 
+
+### Опционально - Drag & Drop
+* Код из [поста](https://blog.reactnativecoach.com/creating-draggable-component-with-react-native-132d30c27cb0)
+* [Официальная документация](https://facebook.github.io/react-native/docs/panresponder)
+
+
 **Важно помнить:**
 
 Not everything you can do with Animated is currently supported by the native driver. The main limitation is that you can only animate non-layout properties: things like transform and opacity will work, but flexbox and position properties will not. When using Animated.event, it will only work with direct events and not bubbling events. This means it does not work with PanResponder but does work with things like ScrollView#onScroll.
 
 When an animation is running, it can prevent VirtualizedList components from rendering more rows. If you need to run a long or looping animation while the user is scrolling through a list, you can use isInteraction: false in your animation's config to prevent this issue.
+
+
+## Ссылка на опрос:
+https://otus.ru/polls/5404/
+
+## Домашнее задание
