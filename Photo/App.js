@@ -1,24 +1,23 @@
 import React from 'react';
 import {
   SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
   StatusBar,
 } from 'react-native';
-import { ImagePicker } from './Components/ImagePicker';
+import {ImagePicker} from './Components/ImagePicker';
+import {Error} from './Components/Error';
 
 const App = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-       <ImagePicker/>
+        <ImagePicker />
+        {/*<Error error={'some problem'} />*/}
+        {/*<Error />*/}
+        {/*<Error error={""}/>*/}
       </SafeAreaView>
     </>
   );
 };
-
 
 export default App;
