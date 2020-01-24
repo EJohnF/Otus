@@ -2,6 +2,9 @@ import React from 'react';
 import {
   SafeAreaView,
   StatusBar,
+  KeyboardAvoidingView,
+  TextInput,
+  View,
 } from 'react-native';
 import {ImagePicker} from './Components/ImagePicker';
 import {Error} from './Components/Error';

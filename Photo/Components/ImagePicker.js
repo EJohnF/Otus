@@ -16,7 +16,7 @@ const options = {
 export const ImagePicker = () => {
   const [image, setImage] = useState(undefined);
   const pickImage = useCallback(() => {
-    ImagePickerLib.showImagePicker(options, response => {
+    ImagePickerLib.launchCamera(options, response => {
       console.log('Response = ', response);
       if (response.didCancel) {
         console.log('User cancelled image picker');
@@ -32,22 +32,22 @@ export const ImagePicker = () => {
         // const source = { uri: 'data:image/jpeg;base64,' + response.data };
 
         // you can compress image
-        // ImageResizer.createResizedImage(
-        //   response.uri,
-        //   response.width / 6,
-        //   response.height / 6,
-        //   'JPEG',
-        //   5,
-        // ).then(compressed => {
-        //   const now = String(Date.now());
-        //   const source = {
-        //     uri: compressed.uri,
-        //     width: response.width / 4,
-        //     height: response.height / 4,
-        //     name: `${now}.jpg`,
-        //   };
-        //   setImage(source);
-        // });
+        ImageResizer.createResizedImage(
+          response.uri,
+          response.width / 6,
+          response.height / 6,
+          'JPEG',
+          5,
+        ).then(compressed => {
+          const now = String(Date.now());
+          const source = {
+            uri: compressed.uri,
+            width: response.width / 4,
+            height: response.height / 4,
+            name: `${now}.jpg`,
+          };
+          setImage(source);
+        });
       }
     });
   }, []);
